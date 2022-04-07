@@ -1,7 +1,7 @@
 package com.training;
 
 public class Greeting {
-	private String getMessage() {
+	public String getMessage() {
 		
 		return "Welcome to Java Programming";
 	}

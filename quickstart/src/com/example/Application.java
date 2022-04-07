@@ -31,7 +31,7 @@ public class Application {
         
         Student magesh=new Student(988,"subramani","textilre");
         
-        magesh.
+        
         
         
             System.out.println("Roll NUMBER:"+magesh.getRollNumber());

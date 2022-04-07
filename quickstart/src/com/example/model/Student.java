@@ -1,6 +1,7 @@
 package com.example.model;
 
 public class Student {
+	public static final String System = null;
 	private int rollNumber;
 	private String firstName;
 	private double markScored;
