@@ -8,18 +8,17 @@ public class Book implements Comparable<Book>,Serializable {
 	private String bookName;
 	private String author;
 	private double price;
-	private double discount;
+
 	public Book() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Book(int bookNumber, String bookName, String author, double price,double discount) {
+	public Book(int bookNumber, String bookName, String author, double price) {
 		super();
 		this.bookNumber = bookNumber;
 		this.bookName = bookName;
 		this.author = author;
 		this.price = price;
-		this.discount=discount;
 	}
 	public int getBookNumber() {
 		return bookNumber;
@@ -45,13 +44,7 @@ public class Book implements Comparable<Book>,Serializable {
 	public void setPrice(double price) {
 		this.price = price;
 	}
-	public double getDiscount(double discount) {
-		return discount;
-	}
-	public void setDiscount(double discount) {
-		this.discount=discount;
 		
-	}
 	@Override
 	public String toString() {
 		return "Book [bookNumber=" + bookNumber + ", bookName=" + bookName + ", author=" + author + ", price=" + price

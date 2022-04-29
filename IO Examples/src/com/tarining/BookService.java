@@ -30,7 +30,7 @@ public class BookService {
 				String[] values = line.split(",");
 				Book book = new Book(Integer.parseInt(values[0]),
 						values[1],values[2],
-						Double.parseDouble(values[3]), 0;
+						Double.parseDouble(values[3]));
 				bookList.add(book);
 			}
 			

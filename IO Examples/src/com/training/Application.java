@@ -16,9 +16,12 @@ public class Application {
 		if(ch==1) {
 
 		Book book =new Book(8847,"Oracle","Harish",560);
+		
 		boolean result=service.writeToStream(file,book);
+		
 	if(result) {
-			System.out.println("One Record Serialized");
+
+		System.out.println("One Record Serialized");
 		}
 	} else {
 	Book fromFile=(Book)service.readFromStream(file);
