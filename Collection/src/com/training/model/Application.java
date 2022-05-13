@@ -30,13 +30,13 @@ public class Application {
 		CrudRepository service=new BookService();
 		
 		System.out.println("Greater than 400");
-		List<Book>bookList=(List<Book>)service).getBookGrtThan(800);//casting
-		bookList.forEach(System.out::println);
+	//	List<Book>bookList=(List<Book>)service).getBookGrtThan(800);//casting
+		//bookList.forEach(System.out::println);
 		
 		System.out.println("==============");
 		Book foundBook=service.findBy(101);
 				
-				System.out.println("Foung Book"+foundBook);
+		System.out.println("Foung Book"+foundBook);
 		System.out.println(service.add(java));
 		System.out.println(service.add(spring));
 	  	System.out.println(service.add(maven));
