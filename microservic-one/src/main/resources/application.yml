@@ -1,0 +1,9 @@
+server:
+  port: 6060
+ 
+spring:
+  application:
+    name: driver-service
+  config:
+    import: configserver:http://localhost:8888
+
