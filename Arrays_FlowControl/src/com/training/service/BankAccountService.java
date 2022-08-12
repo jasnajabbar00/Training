@@ -4,20 +4,21 @@ import com.training.model.BankAccount;
 public class BankAccountService {
 
 	public double calculateInterest(BankAccount account) {
+		
 		double simpleInterest=0.05;
+		
 		if(account.getAccountNumber()<=5000) {
 			
 			simpleInterest=0.06;
 		}
 		return account.getBalance()*1*simpleInterest;
-		
-		
 	}
 
 	public BankAccountService() {
 		super();
-		// TODO Auto-generated constructor stub
+
 	}
+	
 	//overloaded method
 	public void calculateInterest(BankAccount[] accounts) {
 
@@ -27,12 +28,13 @@ public class BankAccountService {
 	}
 	}
 	
-	public double[] findInterest(BankAccount[] accounts) {                             //any size array
+	public double[] findInterest(BankAccount[] accounts) {          //any size array
 		
-		        double[] values= new double[2];                                //to declare array
+		        double[] values= new double[2];                     //to declare array
 	            int i=0;
 		        
 		        for(BankAccount eachAccount:accounts) {
+		        	
 		         values[i]=calculateInterest(eachAccount);
 		         i++;
 	}
@@ -48,8 +50,7 @@ public class BankAccountService {
 //		if(type.equals("fixed")||type.equals("recurring")) {
 //			rateOfInterest=0.06;
 //		}
-//		return rateOfInterest;
-		return accounts.getBalance()*1*rateOfInterest;
+			return accounts.getBalance()*1*rateOfInterest;
 	}
 
 	public double[] findInterestByAccountType(BankAccount[] accounts) {

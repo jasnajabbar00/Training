@@ -22,7 +22,6 @@ public class BookService implements CrudRepository {
 		                                            //return result;
 			return booklist.add(book); //indirectly returning boolean
 	}
-
 	@Override
 	public Book findBy(int id) {
 		
@@ -33,22 +32,18 @@ public class BookService implements CrudRepository {
 				found=eachBook;
 			}
 		}
-		
 		return found;
 	}
-
 	@Override
 	public boolean remove(Book book) {
 	
 		return false;
 	}
-
 	@Override
 	public List<Book> findAll() {
 		
 		return this.booklist;
 	}
-
 	@Override
 	public Book update(Book oldBook,Book newBook) {
 		
@@ -58,7 +53,6 @@ public class BookService implements CrudRepository {
 			int idxPos=this.booklist.indexOf(oldBook);
 			
 			this.booklist.set(idxPos,newBook);
-			
 			
 		}else {
 		

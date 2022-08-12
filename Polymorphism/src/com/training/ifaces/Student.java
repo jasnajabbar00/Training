@@ -5,9 +5,8 @@ public class Student implements Conditional {
 	
 		public Student() {
 		super();
-		// TODO Auto-generated constructor stub
+		
 	}
-
 		public Student(int markScored) {
 			super();
 			this.markScored = markScored;

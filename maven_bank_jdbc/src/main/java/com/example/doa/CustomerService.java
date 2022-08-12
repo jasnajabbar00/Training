@@ -30,35 +30,32 @@ public class CustomerService implements CrudRepository<loanApplication>{
 		String sql="insert into jasna_customer values(?,?,?,?)";
 		String sql1="insert into jasna_loanApplication values(?,?,?)";
 
-		
-		
 		try(PreparedStatement pstmt=con.prepareStatement(sql)) {
-				try(PreparedStatement pstmt1=con.prepareStatement(sql1)) {
+			
+			try(PreparedStatement pstmt1=con.prepareStatement(sql1)) {
 						
-						pstmt.setInt(1,obj.getCustomer().getCustomerId());
-						pstmt.setString(2,obj.getCustomer().getCustomerName());
-						pstmt.setLong(3,obj.getCustomer().getPhoneNumber());
-						pstmt.setDouble(4,obj.getCustomer().getCreditScore());
-						
-					pstmt.executeUpdate();
-						
-						pstmt1.setInt(1,obj.getApplicationNumber());
-						pstmt1.setInt(2,obj.getCustomer().getCustomerId());
-						pstmt1.setDouble(3,obj.getLoanAmount());
+				pstmt.setInt(1,obj.getCustomer().getCustomerId());
+				pstmt.setString(2,obj.getCustomer().getCustomerName());
+				pstmt.setLong(3,obj.getCustomer().getPhoneNumber());
+				pstmt.setDouble(4,obj.getCustomer().getCreditScore());
+				pstmt.executeUpdate();
+				pstmt1.setInt(1,obj.getApplicationNumber());
+				pstmt1.setInt(2,obj.getCustomer().getCustomerId());
+				pstmt1.setDouble(3,obj.getLoanAmount());
 					
-						rowAdded=pstmt1.executeUpdate();
-						System.out.println("row Added"+rowAdded);
+				rowAdded=pstmt1.executeUpdate();
+				System.out.println("row Added"+rowAdded);
 				}}catch(Exception e) {
 					e.printStackTrace();
 				}
-	
-						return rowAdded;
+			return rowAdded;
 	}
 
 	public List<loanApplication> findAll() {
 		
 		List<loanApplication> loanList=new ArrayList<loanApplication>();
 		String sql="select * from jasna_customer jc  LEFT OUTER JOIN jasna_loanapplication ja on  jc.customer_id= ja.customerref ";
+		
 		try(PreparedStatement pstmt=con.prepareStatement(sql)) {
             
 			ResultSet rs=pstmt.executeQuery();
@@ -82,7 +79,7 @@ public class CustomerService implements CrudRepository<loanApplication>{
 	}
 
 	public int remove(int id) {
-		// TODO Auto-generated method stub
+
 		return 0;
 	}
 
@@ -95,12 +92,15 @@ public class CustomerService implements CrudRepository<loanApplication>{
 			
 			ResultSet rs=pstmt.executeQuery();
 			if(rs.next()) {
+				
 				int applicationNumber=rs.getInt("application_number");
 				double loanAmount=rs.getDouble("loan_amount");
                 int customerId=rs.getInt("customer_id");
+                
                 String customerName=rs.getString("customer_name");
                 long phoneNumber=rs.getLong("phone_number");
                 double creditScore=rs.getDouble("credit_score");
+                
             	Customer customer1=new Customer(customerId,customerName,phoneNumber,creditScore);
                 loanApplication loan1=new loanApplication(applicationNumber,customer1,loanAmount);
                 obj=Optional.of(loan1);
@@ -112,9 +112,7 @@ public class CustomerService implements CrudRepository<loanApplication>{
 	}
 
 	public int update(int Id, loanApplication customer) {
-		// TODO Auto-generated method stub
+
 		return 0;
 	}
-	
-
 }

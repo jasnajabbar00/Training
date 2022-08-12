@@ -18,7 +18,9 @@ public class Book implements Comparable<Book> {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
 	static Logger Log = Logger.getLogger(Book.class.getName());
+	
 	public Book(int bookNumber, String string, String author, double price) {
 		super();
 		this.bookNumber = bookNumber;
@@ -26,6 +28,7 @@ public class Book implements Comparable<Book> {
 		this.author = author;
 		this.price = price;
 	}
+	
 	public int getBookNumber() {
 		return bookNumber;
 	}
@@ -54,11 +57,15 @@ public class Book implements Comparable<Book> {
 	public int compareTo(Book otherObj) {
 		// TODO Auto-generated method stub
 //		if(otherObj.bookNumber<this.bookNumber) return-1 ;
+		
 		if(otherObj.bookNumber<this.bookNumber) 
 		return 1;
-//			
+	
 //		return otherObj.bookName.compareTo(this.bookName);
 		return bookNumber;
 		
+	}
+}
 
-}}
+
+

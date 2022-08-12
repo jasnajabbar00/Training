@@ -5,9 +5,10 @@ public class loanApplication {
 	private int applicationNumber;
 	private Customer customer;
 	private double loanAmount;
+	
 	public loanApplication() {
 		super();
-		// TODO Auto-generated constructor stub
+
 	}
 	public loanApplication(int applicationNumber, Customer customer, double loanAmount) {
 		super();

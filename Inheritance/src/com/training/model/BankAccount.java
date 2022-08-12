@@ -12,10 +12,9 @@ public class BankAccount {
 		super();
 		
 		System.out.println("Zero arg constructor of SUPER CLASS called");
-		// TODO Auto-generated constructor stub
 	}
-//parameterized constructor
-  
+	
+	//parameterized constructor  
 	public BankAccount(int accountNumber, String accountHolderName, double balance) { //removing will shown error
 		super();
 			System.out.println("Zero arg constructor of SUPER CLASS called");
@@ -59,14 +58,11 @@ public class BankAccount {
 		this.accountType = accountType;
 	}
 	@Override
-	public String toString() {
-		// TODO Auto-generated method stub
+	public String toString() { 
+		
 		//return this.accountNumber +","+ this.accountHolderName + "," + this.balance + "," + this.accountType;
 		return super.toString() + this.accountNumber + "," + this.accountHolderName + "," + this.balance+","+this.accountType;
-		
 	}
-
-	
 }
 	
 	

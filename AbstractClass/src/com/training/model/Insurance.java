@@ -1,4 +1,4 @@
-package com.training.model;
+ package com.training.model;
 
 public abstract class Insurance {
 
@@ -6,13 +6,13 @@ public abstract class Insurance {
 	private String policyHolderName;
 	
 	
-	//zero arg constructor
+	//zero argument constructor
 	public Insurance() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	//arg constructor
+	//parameterized constructor
 	public Insurance(int policyNumber, String policyHolderName) {
 		super();
 		this.policyNumber = policyNumber;

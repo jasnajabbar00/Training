@@ -1,6 +1,6 @@
 package com.training;
 
-public interface Automobile {
+public interface Automobile{
 
 	public String getColor();
 	public String getModel();

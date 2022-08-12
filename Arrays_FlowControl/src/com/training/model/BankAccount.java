@@ -5,17 +5,15 @@ public class BankAccount {
 	private int accountNumber;
 	private String accountHolderName;
 	private double balance;
-	
 	private String accountType;
 	
 	public BankAccount() {
 		super();
 		System.out.println("Zero Arg constructor of SUPER CLASS Called");
-		// TODO Auto-generated constructor stub
 	}
-//parameterized constructor
-  
-	public BankAccount(int accountNumber, String accountHolderName, double balance) { //removing will shown error
+	
+	//parameterized constructor
+	public BankAccount(int accountNumber, String accountHolderName, double balance) { 
 		super();
 		System.out.println("Three Argu constructor of SUPER CLASS Called");
 		

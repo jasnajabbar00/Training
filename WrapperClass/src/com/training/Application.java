@@ -18,7 +18,7 @@ public class Application {
         
        System.out.println(conv.inrToUsd(dblAmount));
        
-       Double inrValue=Double.parseDouble(args[1]);
+       double inrValue=Double.parseDouble(args[1]);
        
        System.out.println(conv.inrToEuro(inrValue));
        
@@ -27,8 +27,10 @@ public class Application {
        int age=21;
        
        String strAge=Integer.toString(age);
-       int intAge=Integer.valueOf(strAge);
-       	}
+      int intAge=Integer.valueOf(strAge);  //unboxing
+       
+   
+	}
 
 }
 

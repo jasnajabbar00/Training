@@ -1,30 +1,28 @@
 package com.training;
+import com.training.CreditCard;
 
-public class CreditCardService {
-	private CreditCard[] list;
+public class CreditCardService 
+{
 	
-	public CreditCardService() {
+	public boolean addCard(CreditCard card)
+	{
+		int i=0;
+		CreditCard[] cards = new CreditCard[1];
+		for(CreditCard eachcards : cards)
+		{
+			cards[i]=card;
+			
+		}
+		return true;
+	}
+	
+	public CreditCard[] getCards()
+	{
 		
-		super();
-		this.list = new CreditCard[5];		
+		return null;
 	}
 
-	public boolean addCard(CreditCard card) {
-		
-		this.list[0]=card;
-		return false;
-		
-		for(CreditCard eachcards : card) {
-			
-			card[i]=card;
-		}
-			
-		
-	}
-	public CreditCard[] getCards( ) {
-		
-		
-	}
+
 	
 	
 }

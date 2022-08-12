@@ -11,14 +11,12 @@ import com.training.service.BookService;
 public class Application {
 	public static void print(List<Book> books)
 	{
-
 		for(Book eachBook: books)
 		{
 			System.out.println(eachBook);
 		}
 		//books.forEach(System.out::println)-instead of for loop
 	}
-
 	public static void main(String[] args) {
 
 		Book java=new Book(101,"java","suba",450);
@@ -57,9 +55,8 @@ print(service.findAll());
 	
 	service.add(react);
    
-	
 	Book reactNew=new Book(205,"ReactJS","Rahul",7850);
-	System.out.println("####################3");
+	System.out.println("####################");
 	Book react2=new Book(203,"react 2.0","keerthik",650);
 			
 	service.update(react,react2);
